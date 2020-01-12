@@ -25,32 +25,39 @@ ul {
 }
 
 /* Navigation */
-nav {
-  background-color: rgba(50, 103, 56, 0.75);
+nav li a {
+  color: white
+}
+
+.top-nav{
+    background-color: rgba(20, 27, 181, 1);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin: 0 auto;
+    top: 0;
+    display: flex;
+    justify-content: center;
+
 }
 
 .container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin: 0 auto;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
 
-.top-nav {
+.nav-elements {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  background-color: rgba(20, 27, 181, 1);
   align-items: center;
 }
 
 .logo-nav img {
-  width: 70%;
+  width: 68%;
 }
 
 .icons-nav ul {
-  padding: 15px;
   display: flex;
   justify-content: flex-end;
 }
@@ -65,15 +72,16 @@ nav {
 
 .categories {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-size: 16px;
   font-family: "Fira Sans";
   width: 100%;
 }
 
 .categories li {
   display: inline-block;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Hero */
@@ -88,7 +96,7 @@ nav {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-content: space-between;
-  margin-top: 144px;
+  margin-top: 88px;
 }
 
 .hero-txt {
@@ -96,7 +104,7 @@ nav {
   display: flex;
   text-align: center;
   color: white;
-  padding-top: 240px;
+  padding-top: 40px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -106,6 +114,7 @@ nav {
   text-align: left;
   display: block;
   margin: 0;
+
 }
 
 .hero-txtp1 {
@@ -113,14 +122,17 @@ nav {
   margin-bottom: 30px;
   font-size: 50px;
   font-family: 'Indie Flower';
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-txtp2 {
   font-size: 50px;
-  font-family: 'Indie Flower';
-  display: inline-block;
+  font-family: 'Fira Sans';
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 127px;
 }
 
 .hero-btn {
@@ -134,7 +146,7 @@ nav {
   margin-bottom: 15px;
 }
 
-/* Articles */
+/* Texte de présentation */
 a {
   text-decoration: none;
 }
@@ -187,6 +199,7 @@ a:hover {
 
 section div img {
   width: 100%;
+  padding-top: 3px;
 }
 
 /* .product-cta {
@@ -197,6 +210,11 @@ section div img {
   text-decoration: none;
   display: inline-block;
 } */
+.single-product {
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 .single_product-wrapper p {
   margin: 0
 }
@@ -205,23 +223,22 @@ section div img {
   max-width: 100%;
   text-align: center;
   padding: 20px;
-  color: white;
   background-color: grey;
   font-size: 30PX;
   font-family: 'Fira Sans';
 }
 
-section {
+section, {
   justify-content: space-around;
   flex-direction: row;
   padding-top: 30px;
   display: flex;
+  padding-bottom: 30px;
 }
 
 article {
   padding: 15px;
   width: 30%;
-
 }
 
 .macarons-ctn {
@@ -261,25 +278,34 @@ article {
 }
 
 .btn-prdct1 {
-  background-color: #CCCCCC;
+  color: rgba(20, 27, 181, 1);
+  border: 3px solid rgba(20, 27, 181, 1);
 }
 
 .btn-prdct2 {
   background-color: rgba(20, 27, 181, 1);
 }
 
-.product_img {}
+
+.price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.old_price {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+  padding-right: 8px;
+}
 
 /* Banniere feature */
 .banner {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  color: white;
-  background-color: rgba(50, 103, 56, 0.85);
-  ;
-  font-size: 30px;
-  border-bottom: 1px solid #666666;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(20, 27, 181, 1);
+  border-top: 1px solid rgba(20, 27, 181, 1);
 }
 
 .feature-all {
@@ -292,14 +318,15 @@ article {
 }
 
 .feature-icons img {
-  width: 90px;
+  width: 50px;
 }
 
 /* footer */
 .footer {
+  position: relative;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  background-color: rgba(20, 27, 181, 1);
   padding: 48px 0;
   border-bottom: 1px solid #666666;
 }
@@ -333,11 +360,9 @@ div[class^=footer__] {
 
 .footer__form-contact label {
   margin-bottom: 8px;
-  color: white;
 }
 
-.footer__form-contact input, .footer__form-contact textarea {
-  color: white;
+.footer__form-contact input, {
   margin-bottom: 16px;
   background: none;
   border-color: white;
@@ -356,58 +381,36 @@ div[class^=footer__] {
   padding: 8px;
   margin: auto;
   border: 0;
-  background-color: #D10F0F;
+  background-color: rgba(20, 27, 181, 1);
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
 }
 
-/* footer bottom*/
-.footer-text {
-  display: flex;
-  justify-content: center;
+.footer__text {
+  padding: 16px;
 }
 
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 48px 16px;
-  background-color: rgba(20, 27, 181, 1);
-  ;
+.footer a {
+  color: black;
 }
 
-.price {
-  display: flex;
-  justify-content: flex-end;
+.space{
+  padding: 10px
 }
 
-.old_price {
-  text-decoration: line-through;
-  color: rgba(0, 0, 0, 0.5);
-  padding-right: 8px;
+.space-bottom{
+  margin-bottom: 3px;
 }
-
+.btn-text-w{
+  color: white;
+}
 .ancre img {
   width: 40px;
 }
 
-/* .ancre{
-  width: 100%;
-  height: 500px;
+.ancre{
   position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-} */
-.seo {
-  color: rgba(20, 27, 181, 1);
-  background-color: rgba(20, 27, 181, 1);
-  size: 5px;
-  margin: 0;
+  bottom: 30px;
+  right: 20px;
 }
-
-/* Référencement SEO */
-
-h4 {
-  margin: 0
-};
